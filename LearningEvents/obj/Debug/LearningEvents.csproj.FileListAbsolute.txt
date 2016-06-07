@@ -1,0 +1,11 @@
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\bin\Debug\LearningEvents.exe.config
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\bin\Debug\LearningEvents.exe
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\bin\Debug\LearningEvents.pdb
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csprojResolveAssemblyReference.cache
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Form1.resources
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Properties.Resources.resources
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csproj.GenerateResource.Cache
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.exe
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.pdb
+c:\users\jimmy.zars\documents\visual studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.newSessionForm.resources
+C:\Users\jimmy.zars\Documents\Visual Studio 2015\Projects\LearningEvents\LearningEvents\obj\Debug\LearningEvents.xmlGenerator.resources
