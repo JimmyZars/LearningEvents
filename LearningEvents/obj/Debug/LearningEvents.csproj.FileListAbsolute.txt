@@ -12,3 +12,11 @@ C:\Users\jimmy.zars\Documents\Visual Studio 2015\Projects\LearningEvents\Learnin
 C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\LearningEvents.exe.config
 C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.exe
 C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.pdb
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\LearningEvents.exe
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\LearningEvents.pdb
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csprojResolveAssemblyReference.cache
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Form1.resources
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.newSessionForm.resources
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Properties.Resources.resources
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.xmlGenerator.resources
+C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csproj.GenerateResource.Cache

@@ -8,4 +8,5 @@ xxTalent and Organization Live - Organization Changexx   yyA82603yy
 xxFY15 Strategy T&O Summit: Workforce of the Futurexx   yyA76518yy 
 xxtestxx   yytestyy 
 xxtestingxx   yytestingyy 
-xxHR Leadership Training:  a BOLD Journey in the NEWxx  yyA45661yy
+xxHR Leadership Training:  a BOLD Journey in the NEWxx   yyA45661yy 
+xxTestingxx  yyTestingyy

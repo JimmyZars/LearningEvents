@@ -14,53 +14,57 @@ namespace LearningEvents
 {
     public partial class Form1 : Form
     {
-        //new session form variables
-        public static string getCourseNum = "";
-        public static string getCourseName = "";
-        public static string getSessionNum = "";
-        
-
+        //Initialize Form
         public Form1()
         {
+            //Show Form
             InitializeComponent();
+            
+            //Full screen window
             WindowState = FormWindowState.Maximized;
+
+            //Map network drive to save files
             mapNetworkDrive();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        { 
-
-        }
-
+        //New Session Button Clicked
         private void addButton_Click(object sender, EventArgs e)
         {
+            //Open a new session form
             newSessionForm sessionForm = new newSessionForm();
             sessionForm.Show();
         }
 
+        //Open Session Button Clicked
         private void openButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(getCourseNum);
+           //Nothing yet
         }
 
         //Map network drive to save files
         private void mapNetworkDrive()
         {
+            //Run batch file to connect to network drive
             System.Diagnostics.Process.Start("LEMap.bat");
         }
     }
+
     public partial class newSessionForm : Form
     {
+        //new session variables
+        private string getCourseNum, getCourseName, getSessionNum;
+
         //
         string[] filearray, filepaths;
-        string[] courselistarray = new string[100];
-        string[] coursecodearray = new string[100];
-        List<string> courseList = new List<string>();
-        List<string> filelist = new List<string>();
-        public static string courseCodePath;
-        public static string sessionCodePath;
-        public static bool sessionLevel = false;                
-        string coursesString;
+
+        string[] courselistarray, coursecodearray = new string[100];
+
+        List<string> courseList, filelist = new List<string>();
+
+        public static string courseCodePath, sessionCodePath, coursesString;
+
+        public static bool sessionLevel = false;       
+                 
         public newSessionForm()
         {
             InitializeComponent();
@@ -134,7 +138,7 @@ namespace LearningEvents
                     try
                     {
                         //Assign Course Name
-                        Form1.getCourseName = courseName.Text;
+                        getCourseName = courseName.Text;
                         coursesString += "xx" + courseName.Text + "xx  yy" + courseCode.Text + "yy";
                         System.IO.File.WriteAllText("courses.txt", coursesString);
                     }
@@ -145,7 +149,7 @@ namespace LearningEvents
                     try
                     {
                         //Assign Course Code
-                        Form1.getCourseNum = courseCode.Text;
+                        getCourseNum = courseCode.Text;
                     }
                     catch (NullReferenceException)
                     {
@@ -166,7 +170,7 @@ namespace LearningEvents
                 {
                     //   Assign Course Name
                     int x = Array.IndexOf(courselistarray, comboBox1.Text);
-                    Form1.getCourseNum = coursecodearray[x];
+                    getCourseNum = coursecodearray[x];
 
                 }
                 catch (NullReferenceException)
@@ -182,7 +186,7 @@ namespace LearningEvents
             if (checkBox1.Checked)
             {
                 //Assign Session Number
-                Form1.getSessionNum = sessionCode.Text;
+                getSessionNum = sessionCode.Text;
             }
             createFolders();
             if (System.IO.File.Exists(sessionCodePath + "\\materials\\index.html"))
@@ -288,7 +292,7 @@ namespace LearningEvents
                 MessageBox.Show("Unable to Connect to Network Drive.  Please check your connection.");
             }
 
-            courseCodePath = "L:\\" + Form1.getCourseNum;
+            courseCodePath = "L:\\" + getCourseNum;
             if (!System.IO.Directory.Exists(courseCodePath))
             {
                 System.IO.Directory.CreateDirectory(courseCodePath);
@@ -296,11 +300,11 @@ namespace LearningEvents
                 System.IO.Directory.CreateDirectory(courseCodePath + "\\schedule");
             }
 
-            if (Form1.getSessionNum.Length > 0)
+            if (getSessionNum.Length > 0)
             {
                 MessageBox.Show("Here");
 
-                sessionCodePath = courseCodePath + "\\" + Form1.getSessionNum;
+                sessionCodePath = courseCodePath + "\\" + getSessionNum;
                 if (!System.IO.Directory.Exists(sessionCodePath))
                 {
                     System.IO.Directory.CreateDirectory(sessionCodePath);
