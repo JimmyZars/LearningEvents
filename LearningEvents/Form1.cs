@@ -177,6 +177,8 @@ namespace LearningEvents
                     {
                         MessageBox.Show("Invalid Course Number");
                     }
+
+                    //Hide first form and show the second form
                     panel2.Visible = false;
                     panel1.Visible = true;
                     button1.Visible = false;
@@ -199,6 +201,8 @@ namespace LearningEvents
                 {
                     MessageBox.Show("Invalid Course Name");
                 }
+
+                //Hide the first form and show the second form
                 panel2.Visible = false;
                 panel1.Visible = true;
                 button1.Visible = false;
@@ -310,18 +314,36 @@ namespace LearningEvents
         //Create folder structure
         private void createFolders()
         {
+            //Check if successfully mapped to network drive
             if (!System.IO.Directory.Exists("L:"))
             {
-                MessageBox.Show("Unable to Connect to Network Drive.  Please check your connection.");
+                //If no connection ask if they want to store locally
+                DialogResult dResult = MessageBox.Show("Unable to establish a connection to the network drive.  Would you like select a local folder to store your files?", "Unable to Connect", MessageBoxButtons.YesNo);
+                if(dResult == DialogResult.Yes)
+                {
+                    //Get local root folder
+                    FolderBrowserDialog fbd = new FolderBrowserDialog();
+
+                    DialogResult result = fbd.ShowDialog();
+
+                    courseCodePath = fbd.SelectedPath + "\\" + getCourseNum;
+                }
+                else
+                {
+                    //Close the form
+                    this.Close();
+                }
+            }else
+            {
+                //Set course code path to newly mapped network drive
+                courseCodePath = "L:\\" + getCourseNum;
             }
 
-            //Set course code path to newly mapped network drive
-            courseCodePath = "L:\\" + getCourseNum;
             if (!System.IO.Directory.Exists(courseCodePath))
             {
                 //Create folders
                 System.IO.Directory.CreateDirectory(courseCodePath);
-                System.IO.Directory.CreateDirectory(courseCodePath+"\\materials");
+                System.IO.Directory.CreateDirectory(courseCodePath + "\\materials");
                 System.IO.Directory.CreateDirectory(courseCodePath + "\\schedule");
             }
 
