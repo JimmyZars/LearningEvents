@@ -52,35 +52,52 @@ namespace LearningEvents
     public partial class newSessionForm : Form
     {
         //new session variables
-        private string getCourseNum, getCourseName, getSessionNum;
+        private string getCourseNum = "";
+        private string getSessionNum = "";
+        private string getCourseName = "";
 
-        //
+        //List of files for index.html
         string[] filearray, filepaths;
 
-        string[] courselistarray, coursecodearray = new string[100];
+        //Arrays for course codes and names
+        string[] courselistarray = new string[100];
+        string[] coursecodearray = new string[100];
 
-        List<string> courseList, filelist = new List<string>();
+        //Lists to display in dropdowns
+        List<string> courseList = new List<string>();
+        List<string> filelist = new List<string>();
 
+        //File paths for folder structures
         public static string courseCodePath, sessionCodePath, coursesString;
 
+        //Tells if session level is checked
         public static bool sessionLevel = false;       
-                 
+         
+        //Initialize new session form        
         public newSessionForm()
         {
             InitializeComponent();
+
+            //Course level radio button checked by default
             radioButton1.Checked = true;
+
+            //New Course labels and textboxes hidden by default
             label2.Visible = false;
             label3.Visible = false;
             courseCode.Visible = false;
             courseName.Visible = false;
+
+            //Create list of courses from text file
             createCourses();
         }
 
         //Existing Course radio button
         private void radioButton1_CheckedChanged(object sender, System.EventArgs e)
         {
+            //Existing Course Radio Button is checked
             if (radioButton1.Checked)
             {
+                //Hide new course labels and text boxes
                 label2.Visible = false;
                 label3.Visible = false;
                 courseCode.Visible = false;
@@ -91,8 +108,10 @@ namespace LearningEvents
         //New Course radio button
         private void radioButton2_CheckedChanged(object sender, System.EventArgs e)
         {
+            //New Course Radio Button is checked
             if (radioButton2.Checked)
             {
+                //Show new course labels and text boxes
                 label2.Visible = true;
                 label3.Visible = true;
                 courseCode.Visible = true;
@@ -105,12 +124,14 @@ namespace LearningEvents
         {
             if (checkBox1.Checked)
             {
+                //Show Session Number label and text box
                 label4.Visible = true;
                 sessionCode.Visible = true;
                 sessionLevel = true;
             }
             else
             {
+                //Hide Session Number label and text box
                 label4.Visible = false;
                 sessionCode.Visible = false;
                 sessionLevel = false;
@@ -120,6 +141,7 @@ namespace LearningEvents
         //Cancel Button
         private void button2_Click(object sender, System.EventArgs e)
         {
+            //Close Window
             this.Close();
         }
 
@@ -202,6 +224,7 @@ namespace LearningEvents
         //Previous Button Clicked
         private void prevButton_Click(object sender, System.EventArgs e)
         {
+            //Display the previous form
             panel1.Visible = false;
             panel2.Visible = true;
         }
@@ -292,9 +315,11 @@ namespace LearningEvents
                 MessageBox.Show("Unable to Connect to Network Drive.  Please check your connection.");
             }
 
+            //Set course code path to newly mapped network drive
             courseCodePath = "L:\\" + getCourseNum;
             if (!System.IO.Directory.Exists(courseCodePath))
             {
+                //Create folders
                 System.IO.Directory.CreateDirectory(courseCodePath);
                 System.IO.Directory.CreateDirectory(courseCodePath+"\\materials");
                 System.IO.Directory.CreateDirectory(courseCodePath + "\\schedule");
@@ -368,21 +393,22 @@ namespace LearningEvents
             int count = 0;
             while ((nextLine = fileReader.ReadLine()) != null)
             {
-                Match matchcoursename = Regex.Match(nextLine, thiscoursename);
-                if (matchcoursename.Success)
-                {
-                    string tempName = matchcoursename.Groups[1].Value;
-                    courselistarray[count] = tempName;
-                    coursesString += "xx" + tempName + "xx   ";
-                }
-                Match matchcoursecode = Regex.Match(nextLine, thiscoursecode);
-                if (matchcoursecode.Success)
-                {
-                    string tempCode = matchcoursecode.Groups[1].Value;
-                    coursecodearray[count] = tempCode;
-                    coursesString += "yy" + tempCode + "yy " + Environment.NewLine;
-                }
-                count++;
+                    Match matchcoursename = Regex.Match(nextLine, thiscoursename);
+                    if (matchcoursename.Success)
+                    {
+                        string tempName = matchcoursename.Groups[1].Value;
+                        courselistarray[count] = tempName;
+                        coursesString += "xx" + tempName + "xx     ";
+                    }
+                    Match matchcoursecode = Regex.Match(nextLine, thiscoursecode);
+                    if (matchcoursecode.Success)
+                    {
+                        string tempCode = matchcoursecode.Groups[1].Value;
+                        coursecodearray[count] = tempCode;
+                        coursesString += "yy" + tempCode + "yy     " + Environment.NewLine;
+                    }
+                    count++;
+ 
             }
 
             for (int i = 0; i < courselistarray.Length; i++)

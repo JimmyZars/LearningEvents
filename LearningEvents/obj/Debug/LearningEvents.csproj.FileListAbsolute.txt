@@ -20,3 +20,14 @@ C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\Learning
 C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Properties.Resources.resources
 C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.xmlGenerator.resources
 C:\Users\Jimmy\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csproj.GenerateResource.Cache
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\LearningEvents.exe.config
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.exe
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.pdb
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\LearningEvents.exe
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\LearningEvents.pdb
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csprojResolveAssemblyReference.cache
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Form1.resources
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.newSessionForm.resources
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Properties.Resources.resources
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.xmlGenerator.resources
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csproj.GenerateResource.Cache

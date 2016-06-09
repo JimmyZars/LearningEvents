@@ -130,6 +130,7 @@
             this.label2.Size = new System.Drawing.Size(121, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Open Session";
+            this.label2.Visible = false;
             // 
             // openButton
             // 
@@ -143,6 +144,7 @@
             this.openButton.Size = new System.Drawing.Size(108, 96);
             this.openButton.TabIndex = 2;
             this.openButton.UseVisualStyleBackColor = false;
+            this.openButton.Visible = false;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // Form1
