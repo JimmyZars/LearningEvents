@@ -55,7 +55,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="learningEventsCourse.cs" />
-    <Compile Include="newSessionForm.cs" />
+    <Compile Include="newSessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="newSessionForm.Designer.cs">
       <DependentUpon>newSessionForm.cs</DependentUpon>
     </Compile>
@@ -87,6 +89,7 @@
     <EmbeddedResource Include="xmlGenerator.resx">
       <DependentUpon>xmlGenerator.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

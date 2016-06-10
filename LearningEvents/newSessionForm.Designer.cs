@@ -39,7 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.link3name = new System.Windows.Forms.TextBox();
-            this.x = new System.Windows.Forms.TextBox();
+            this.link3 = new System.Windows.Forms.TextBox();
             this.link2name = new System.Windows.Forms.TextBox();
             this.link2 = new System.Windows.Forms.TextBox();
             this.link1name = new System.Windows.Forms.TextBox();
@@ -108,7 +108,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.link3name);
-            this.panel1.Controls.Add(this.x);
+            this.panel1.Controls.Add(this.link3);
             this.panel1.Controls.Add(this.link2name);
             this.panel1.Controls.Add(this.link2);
             this.panel1.Controls.Add(this.link1name);
@@ -156,27 +156,27 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(48, 300);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 13;
-            this.label8.Text = "Link 3";
+            this.label8.Text = "Link 3 URL";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(48, 244);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Link 2";
+            this.label7.Text = "Link 2 URL";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(48, 181);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Link 1";
+            this.label6.Text = "Link 1 URL";
             // 
             // link3name
             // 
@@ -185,12 +185,12 @@
             this.link3name.Size = new System.Drawing.Size(280, 20);
             this.link3name.TabIndex = 10;
             // 
-            // x
+            // link3
             // 
-            this.x.Location = new System.Drawing.Point(129, 293);
-            this.x.Name = "x";
-            this.x.Size = new System.Drawing.Size(280, 20);
-            this.x.TabIndex = 9;
+            this.link3.Location = new System.Drawing.Point(129, 293);
+            this.link3.Name = "link3";
+            this.link3.Size = new System.Drawing.Size(280, 20);
+            this.link3.TabIndex = 9;
             // 
             // link2name
             // 
@@ -484,7 +484,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox link3name;
-        private System.Windows.Forms.TextBox x;
+        private System.Windows.Forms.TextBox link3;
         private System.Windows.Forms.TextBox link2name;
         private System.Windows.Forms.TextBox link2;
         private System.Windows.Forms.TextBox link1name;
