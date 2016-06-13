@@ -132,6 +132,10 @@ namespace LearningEvents
                     {
                         MessageBox.Show("Invalid Course Name");
                     }
+                    catch (IOException)
+                    {
+                        
+                    }
                     try
                     {
                         //Assign Course Code
@@ -141,6 +145,7 @@ namespace LearningEvents
                     {
                         MessageBox.Show("Invalid Course Number");
                     }
+
 
                     //Hide first form and show the second form
                     panel2.Visible = false;
@@ -462,39 +467,50 @@ namespace LearningEvents
         //List of courses and course codes in drop down list
         private void createCourses()
         {
-            System.IO.StreamReader fileReader = new System.IO.StreamReader("L:\\Config\\courses.txt");
-            string nextLine = "";
-            string thiscoursename = "xx(.*?)xx";
-            string thiscoursecode = "yy(.*?)yy";
-            int count = 0;
-            while ((nextLine = fileReader.ReadLine()) != null)
-            {
-                Match matchcoursename = Regex.Match(nextLine, thiscoursename);
-                if (matchcoursename.Success)
+            try {
+                System.IO.StreamReader fileReader = new System.IO.StreamReader("L:\\Config\\courses.txt");
+                string nextLine = "";
+                string thiscoursename = "xx(.*?)xx";
+                string thiscoursecode = "yy(.*?)yy";
+                int count = 0;
+                while ((nextLine = fileReader.ReadLine()) != null)
                 {
-                    string tempName = matchcoursename.Groups[1].Value;
-                    courselistarray[count] = tempName;
-                    coursesString += "xx" + tempName + "xx     ";
+                    Match matchcoursename = Regex.Match(nextLine, thiscoursename);
+                    if (matchcoursename.Success)
+                    {
+                        string tempName = matchcoursename.Groups[1].Value;
+                        courselistarray[count] = tempName;
+                        coursesString += "xx" + tempName + "xx     ";
+                    }
+                    Match matchcoursecode = Regex.Match(nextLine, thiscoursecode);
+                    if (matchcoursecode.Success)
+                    {
+                        string tempCode = matchcoursecode.Groups[1].Value;
+                        coursecodearray[count] = tempCode;
+                        coursesString += "yy" + tempCode + "yy     " + Environment.NewLine;
+                    }
+                    count++;
+
                 }
-                Match matchcoursecode = Regex.Match(nextLine, thiscoursecode);
-                if (matchcoursecode.Success)
+
+                for (int i = 0; i < courselistarray.Length; i++)
                 {
-                    string tempCode = matchcoursecode.Groups[1].Value;
-                    coursecodearray[count] = tempCode;
-                    coursesString += "yy" + tempCode + "yy     " + Environment.NewLine;
+                    courseList.Add(courselistarray[i]);
                 }
-                count++;
-
+                comboBox1.DataSource = courseList;
+                comboBox1.Text = courseList[0];
+                fileReader.Close();
             }
-
-            for (int i = 0; i < courselistarray.Length; i++)
+            catch (NullReferenceException)
             {
-                courseList.Add(courselistarray[i]);
+                MessageBox.Show("Unable to connect to network drive at L:\\LearningEvents.  Course List could not be constructed.");
             }
-            comboBox1.DataSource = courseList;
-            comboBox1.Text = courseList[0];
-            fileReader.Close();
+            catch (IOException)
+            {
+                MessageBox.Show("Unable to connect to network drive at L:\\LearningEvents.  Course List could not be constructed.");
+            }
         }
+        
 
         //populate the content from index.html file into the form
         private void populateIndex()
