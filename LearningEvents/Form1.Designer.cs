@@ -40,7 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openButton = new System.Windows.Forms.Button();
+            this.pdfView = new AxAcroPDFLib.AxAcroPDF();
+            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closePDF = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,6 +97,8 @@
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHelpToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -149,12 +155,46 @@
             this.openButton.Visible = false;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
+            // pdfView
+            // 
+            this.pdfView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pdfView.Enabled = true;
+            this.pdfView.Location = new System.Drawing.Point(41, 44);
+            this.pdfView.Name = "pdfView";
+            this.pdfView.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfView.OcxState")));
+            this.pdfView.Size = new System.Drawing.Size(924, 542);
+            this.pdfView.TabIndex = 5;
+            this.pdfView.Visible = false;
+            // 
+            // viewHelpToolStripMenuItem
+            // 
+            this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewHelpToolStripMenuItem.Text = "View Help";
+            this.viewHelpToolStripMenuItem.Click += new System.EventHandler(this.viewHelpToolStripMenuItem_Click);
+            // 
+            // closePDF
+            // 
+            this.closePDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closePDF.Location = new System.Drawing.Point(863, 60);
+            this.closePDF.Name = "closePDF";
+            this.closePDF.Size = new System.Drawing.Size(75, 23);
+            this.closePDF.TabIndex = 6;
+            this.closePDF.Text = "Close";
+            this.closePDF.UseVisualStyleBackColor = true;
+            this.closePDF.Visible = false;
+            this.closePDF.Click += new System.EventHandler(this.closePDF_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1020, 642);
+            this.Controls.Add(this.closePDF);
+            this.Controls.Add(this.pdfView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.label1);
@@ -166,6 +206,7 @@
             this.Text = "Learning Events Generator";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +225,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button openButton;
+        private AxAcroPDFLib.AxAcroPDF pdfView;
+        private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
+        private System.Windows.Forms.Button closePDF;
     }
 }
 

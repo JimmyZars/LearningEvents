@@ -31,3 +31,8 @@ C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\Lea
 C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.Properties.Resources.resources
 C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.xmlGenerator.resources
 C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csproj.GenerateResource.Cache
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\jimmy.zars\Documents\GitHub\LearningEvents\LearningEvents\obj\Debug\LearningEvents.csproj.ResolveComReference.cache

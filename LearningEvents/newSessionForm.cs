@@ -456,6 +456,17 @@ namespace LearningEvents
             panel1.Visible = true;
         }
 
+        //Skip Upload and go to next form
+        private void nextButton2_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
+
+            MessageBox.Show("No Materials were added");
+
+        }
+
         //exit form and open xml generator
         private void finishButton_Click(object sender, System.EventArgs e)
         {
@@ -511,7 +522,6 @@ namespace LearningEvents
             }
         }
         
-
         //populate the content from index.html file into the form
         private void populateIndex()
         {

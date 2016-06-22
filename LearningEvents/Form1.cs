@@ -61,5 +61,19 @@ namespace LearningEvents
         {
             this.Close();
         }
+
+        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closePDF.Visible = true;
+            pdfView.Visible = true;
+
+            pdfView.src = "\\Learning_Events_Help.pdf";
+        }
+
+        private void closePDF_Click(object sender, EventArgs e)
+        {
+            pdfView.Visible = false;
+            closePDF.Visible = false;
+        }
     }
 }

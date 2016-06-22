@@ -65,6 +65,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.nextButton2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,6 +102,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.nextButton2);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -252,7 +254,7 @@
             // 
             // uploadButton
             // 
-            this.uploadButton.Location = new System.Drawing.Point(334, 357);
+            this.uploadButton.Location = new System.Drawing.Point(238, 357);
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(75, 23);
             this.uploadButton.TabIndex = 1;
@@ -426,6 +428,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // nextButton2
+            // 
+            this.nextButton2.Location = new System.Drawing.Point(335, 357);
+            this.nextButton2.Name = "nextButton2";
+            this.nextButton2.Size = new System.Drawing.Size(75, 23);
+            this.nextButton2.TabIndex = 15;
+            this.nextButton2.Text = "Next";
+            this.nextButton2.UseVisualStyleBackColor = true;
+            this.nextButton2.Click += new System.EventHandler(this.nextButton2_Click);
+            // 
             // newSessionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +501,6 @@
         private System.Windows.Forms.TextBox link2;
         private System.Windows.Forms.TextBox link1name;
         private System.Windows.Forms.TextBox link1;
-
+        private System.Windows.Forms.Button nextButton2;
     }
 }

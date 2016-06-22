@@ -309,7 +309,6 @@ namespace LearningEvents
             return errorx;
         }
 
-
         private void outputWindow_TextChanged(object sender, EventArgs e)
         {
 
@@ -520,6 +519,7 @@ namespace LearningEvents
             error1 = saveEvent();
 
             xmlOutput = generateXML();
+            outputWindow.Text = xmlOutput;
             //  writetofile(xmlOutput);
             SaveFileDialog saveFile;
 
@@ -559,6 +559,7 @@ namespace LearningEvents
                     //Save new file
                     System.IO.File.WriteAllText(saveFile.FileName, xmlOutput);
                     MessageBox.Show("The XML Schedule has been created successfully");
+                    this.Close();
                 }
             }
             else
@@ -573,6 +574,7 @@ namespace LearningEvents
                         //Overwrite file
                         System.IO.File.WriteAllText(saveFile.FileName, xmlOutput);
                         MessageBox.Show("The XML Schedule has been created successfully");
+                        this.Close();
                     }
                     else
                     {
@@ -584,6 +586,7 @@ namespace LearningEvents
                     //Save new file
                     System.IO.File.WriteAllText(saveFile.FileName, xmlOutput);
                     MessageBox.Show("The XML Schedule has been created successfully");
+                    this.Close();
                 }
             }
             /*
@@ -982,6 +985,7 @@ namespace LearningEvents
             outputWindow.Text = xmlOutputWindow;
         }
         //Exit selected, exit the program
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
